@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>88 MPH Diner | Fast Food at 88 Miles Per Hour</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#dbfcff",
+                      "surface-tint": "#00dbe9",
+                      "secondary": "#ffb781",
+                      "secondary-container": "#ff8a0d",
+                      "surface-container-high": "#2a2a2c",
+                      "on-primary-container": "#006970",
+                      "surface-container-lowest": "#0e0e10",
+                      "surface-bright": "#39393b",
+                      "on-tertiary-fixed": "#3f001a",
+                      "on-tertiary-container": "#bb005b",
+                      "surface-container": "#201f21",
+                      "outline-variant": "#3b494b",
+                      "on-secondary-container": "#623000",
+                      "on-secondary-fixed": "#2f1400",
+                      "tertiary-fixed-dim": "#ffb1c4",
+                      "on-tertiary-fixed-variant": "#8f0044",
+                      "on-secondary": "#4e2600",
+                      "surface-container-highest": "#353437",
+                      "on-primary-fixed-variant": "#004f54",
+                      "on-primary": "#00363a",
+                      "on-error-container": "#ffdad6",
+                      "on-tertiary": "#65002e",
+                      "secondary-fixed-dim": "#ffb781",
+                      "inverse-on-surface": "#303032",
+                      "on-background": "#e5e1e4",
+                      "error": "#ffb4ab",
+                      "primary-fixed-dim": "#00dbe9",
+                      "tertiary": "#fff3f4",
+                      "on-secondary-fixed-variant": "#6f3800",
+                      "outline": "#849495",
+                      "background": "#131315",
+                      "on-error": "#690005",
+                      "tertiary-fixed": "#ffd9e1",
+                      "on-surface": "#e5e1e4",
+                      "secondary-fixed": "#ffdcc4",
+                      "on-surface-variant": "#b9cacb",
+                      "primary-fixed": "#7df4ff",
+                      "on-primary-fixed": "#002022",
+                      "inverse-primary": "#006970",
+                      "surface": "#131315",
+                      "inverse-surface": "#e5e1e4",
+                      "error-container": "#93000a",
+                      "surface-dim": "#131315",
+                      "surface-container-low": "#1b1b1d",
+                      "tertiary-container": "#ffccd7",
+                      "surface-variant": "#353437",
+                      "primary-container": "#00f0ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "unit": "4px",
+                      "gutter": "16px",
+                      "margin-mobile": "20px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "margin-desktop": "40px",
+                      "stack-lg": "32px"
+              },
+              "fontFamily": {
+                      "data-mono": [
+                              "JetBrains Mono"
+                      ],
+                      "display-lg-mobile": [
+                              "Sora"
+                      ],
+                      "body-rg": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-lg": [
+                              "Sora"
+                      ],
+                      "label-caps": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-md": [
+                              "Sora"
+                      ]
+              },
+              "fontSize": {
+                      "data-mono": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "body-rg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Sora:wght@100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #121214; /* Matte Steel */
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+            color: #e5e1e4;
+        }
+
+        .neon-border-primary {
+            border: 2px solid theme('colors.primary-container');
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.5), inset 0 0 10px rgba(0, 240, 255, 0.2);
+        }
+
+        .neon-border-secondary {
+            border: 2px solid theme('colors.secondary-container');
+            box-shadow: 0 0 15px rgba(255, 138, 13, 0.5), inset 0 0 10px rgba(255, 138, 13, 0.2);
+        }
+        
+        .neon-text-primary {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.8), 0 0 20px rgba(0, 240, 255, 0.4);
+        }
+
+        .neon-text-secondary {
+            text-shadow: 0 0 10px rgba(255, 138, 13, 0.8), 0 0 20px rgba(255, 138, 13, 0.4);
+        }
+
+        .brushed-metal {
+            background: linear-gradient(135deg, #2a2a2c 0%, #1b1b1d 50%, #2a2a2c 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glass-panel {
+            background: rgba(32, 31, 33, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 240, 255, 0.1);
+        }
+
+        .lcd-text {
+            font-family: 'JetBrains Mono', monospace;
+            color: #ff8a0d; /* secondary-container */
+            text-shadow: 0 0 5px rgba(255, 138, 13, 0.8);
+        }
+        
+        .time-circuit-tab.active {
+             background-color: theme('colors.primary-container');
+             color: theme('colors.on-primary-container');
+             box-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+             border-color: transparent;
+        }
+        
+        .timeline-node {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: theme('colors.surface-container');
+            border: 2px solid theme('colors.outline');
+            z-index: 10;
+            position: relative;
+        }
+        .timeline-node.active {
+            background-color: theme('colors.primary-container');
+            border-color: theme('colors.primary-container');
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.8);
+        }
+    </style>
+</head>
+<body class="font-body-rg text-body-rg antialiased selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-background/80 backdrop-blur-md full-width top-0 sticky z-50 border-b-2 border-primary/30 shadow-[0_4px_20px_rgba(0,219,233,0.2)]">
+<div class="flex justify-between items-center w-full px-gutter py-4 max-w-7xl mx-auto hidden md:flex">
+<div class="font-display-lg text-headline-md tracking-tighter text-secondary italic shadow-[0_0_15px_rgba(255,183,129,0.5)]">
+                88 MPH Diner
+            </div>
+<div class="flex items-center gap-stack-md bg-surface-container-high px-3 py-1 rounded border border-outline-variant/50">
+<span class="material-symbols-outlined text-secondary-container text-sm">schedule</span>
+<span class="lcd-text font-data-mono text-[10px] tracking-widest uppercase">Parked in: Hill Valley, 1985</span>
+</div>
+<div class="flex items-center gap-stack-lg">
+<ul class="flex items-center gap-stack-md">
+<!-- Nav Links -->
+<li class="text-primary font-bold border-b-2 border-primary pb-1 font-label-caps text-label-caps scale-95 active:scale-90 transition-transform">Menu</li>
+<li class="text-on-surface-variant font-label-caps font-label-caps text-label-caps hover:text-primary hover:drop-shadow-[0_0_8px_rgba(0,219,233,0.8)] transition-all scale-95 active:scale-90 transition-transform cursor-pointer">Radar</li>
+<li class="text-on-surface-variant font-label-caps font-label-caps text-label-caps hover:text-primary hover:drop-shadow-[0_0_8px_rgba(0,219,233,0.8)] transition-all scale-95 active:scale-90 transition-transform cursor-pointer">Reviews</li>
+</ul>
+<div class="flex items-center gap-stack-sm">
+<button class="neon-border-primary bg-primary-container/10 text-primary-container font-label-caps text-label-caps px-4 py-2 rounded uppercase tracking-wider hover:bg-primary-container hover:text-on-primary-container transition-all">
+                        Order to the Future
+                    </button>
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center p-2">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile Nav Placeholder (Simplistic for demo) -->
+<div class="flex justify-between items-center w-full px-margin-mobile py-4 md:hidden">
+<div class="font-display-lg-mobile text-headline-md tracking-tighter text-secondary italic">
+                88 MPH Diner
+            </div>
+<button class="text-primary"><span class="material-symbols-outlined">menu</span></button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center pt-stack-lg pb-stack-lg overflow-hidden">
+<!-- Background Elements -->
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="bg-cover bg-center w-full h-full opacity-50 blur-sm" data-alt="A highly detailed, 80s sci-fi aesthetic neon food truck, glowing brightly in a dark, atmospheric city street. Heavy metallic textures, glowing cyan and orange neon signs, brushed stainless steel panels, rain-slicked pavement reflecting the neon lights, cinematic lighting, vapor-mechanical style, dramatic shadows." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAm6OPHXry8bLlZM9qU0lAa_Lfo-yN_GklhSqhte4ZvuIoTbLRtMs5ooyEz0L_ItR29l_GtwMweDLmldrxfdHsWgpYo9EuMF5YRRXaaNcQOKOIE38-1khsNZ5A_pXxsLhxYrwc_09XZV9koucmPKAtcdWmi5pq0svRQKEssWANHWKQKXgmYpBf3VayCHatk88AIER3LXUholNQUpgLWZpUp2VenO92M9jUfkDEq4DrUgVtPTCyHGWeG')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+</div>
+<div class="max-w-7xl mx-auto px-gutter md:px-margin-desktop w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7 flex flex-col gap-stack-lg">
+<div class="inline-flex items-center gap-2 bg-secondary-container/20 border border-secondary-container/50 px-3 py-1 rounded w-fit">
+<span class="material-symbols-outlined text-secondary-container text-sm animate-pulse">flash_on</span>
+<span class="lcd-text font-data-mono text-[12px] uppercase">Temporal Displacement Engaged</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary uppercase neon-text-primary tracking-tight">
+                        Fast Food at 88 Miles Per Hour — Where We’re Going, We Don’t Need Plates.
+                    </h1>
+<p class="font-body-rg text-body-rg text-on-surface-variant max-w-2xl text-lg border-l-2 border-primary-container pl-4">
+                        Authentic street food cooked 5 minutes before the Big Bang, served fresh 30 years from tomorrow.
+                    </p>
+<div class="flex flex-wrap gap-stack-md pt-stack-sm">
+<button class="neon-border-secondary bg-secondary-container/10 text-secondary-container font-label-caps text-label-caps px-6 py-3 rounded uppercase tracking-wider hover:bg-secondary-container hover:text-on-secondary-container transition-all flex items-center gap-2">
+                            Explore Menu
+                            <span class="material-symbols-outlined text-sm">restaurant</span>
+</button>
+<button class="border-2 border-primary-container/30 bg-transparent text-primary-container font-label-caps text-label-caps px-6 py-3 rounded uppercase tracking-wider hover:border-primary-container hover:bg-primary-container/10 hover:shadow-[0_0_15px_rgba(0,240,255,0.3)] transition-all flex items-center gap-2">
+                            Select Delivery Century
+                            <span class="material-symbols-outlined text-sm">rocket_launch</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-5 hidden lg:block relative h-[500px]">
+<div class="absolute inset-0 brushed-metal rounded-xl overflow-hidden shadow-[0_0_30px_rgba(0,240,255,0.15)] border-2 border-primary-container/20">
+<img class="w-full h-full object-cover mix-blend-luminosity opacity-80" data-alt="A highly detailed, 80s sci-fi aesthetic neon food truck, glowing brightly in a dark, atmospheric city street. Heavy metallic textures, glowing cyan and orange neon signs, brushed stainless steel panels, rain-slicked pavement reflecting the neon lights, cinematic lighting, vapor-mechanical style, dramatic shadows, focus on the food service window." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALwrlr5QQj7zzn-EtlP4wQfHGb_eaQ0Ycb2V9WX2u8bIkvg7DiiXAOgDUvh5g_TiDCO16PSfWJGSYlnp9u2EHGZ5qbfd2_1XAz5PMRa6yZ3Rtk-P6e0A68agdlJ-emh_1si9EcUjvGojAS8V-r07o_yiEOvOVP-6mShWcV9lfnDftLHLUuUZyUSRo_kJYztOUysMNOUjup7_lCw_bh88YIjoJRZGASV5A1cqVR4DauLpWuoPH1Tzh0"/>
+<!-- Overlay scanlines -->
+<div class="absolute inset-0 pointer-events-none" style="background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.3) 2px, rgba(0,0,0,0.3) 4px);"></div>
+<!-- Glow accent -->
+<div class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Temporal Menu -->
+<section class="py-stack-lg max-w-7xl mx-auto px-gutter md:px-margin-desktop relative">
+<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg border-b border-outline-variant/50 pb-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-surface-tint flex items-center gap-2">
+<span class="material-symbols-outlined">menu_book</span>
+                        Temporal Menu
+                    </h2>
+<p class="font-data-mono text-data-mono text-on-surface-variant mt-2 text-xs uppercase">Select timeframe parameters</p>
+</div>
+<!-- Time-Circuit Tabs -->
+<div class="flex flex-wrap gap-2 mt-4 md:mt-0">
+<button class="time-circuit-tab active font-label-caps text-label-caps px-4 py-2 border border-outline-variant rounded transition-all uppercase text-[10px]">Prehistoric Jurassic Snacks</button>
+<button class="time-circuit-tab font-label-caps text-label-caps px-4 py-2 border border-outline-variant rounded text-on-surface-variant hover:border-primary-container/50 hover:text-primary-container transition-all uppercase text-[10px]">1955 Diner Classics</button>
+<button class="time-circuit-tab font-label-caps text-label-caps px-4 py-2 border border-outline-variant rounded text-on-surface-variant hover:border-primary-container/50 hover:text-primary-container transition-all uppercase text-[10px]">2015 Cyber Fast Food</button>
+<button class="time-circuit-tab font-label-caps text-label-caps px-4 py-2 border border-outline-variant rounded text-on-surface-variant hover:border-primary-container/50 hover:text-primary-container transition-all uppercase text-[10px]">Paradox Combos</button>
+</div>
+</div>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<article class="glass-panel rounded-lg overflow-hidden flex flex-col group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-40 bg-surface-container-high relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-tr from-surface-container-lowest to-transparent z-10"></div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up food photography of incredibly crispy, large fried chicken strips, styled in a rugged, dark pre-historic aesthetic. Served on a piece of slate or dark rough metal, moody dramatic lighting, high contrast, vapor-mechanical subtle neon accents in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNeumeMuo-OiTHFju_lfS7XIxtM4AjWU9uePUF1aU0KgZzZR0QCsmYk3Dk-rDNhq9XSSEY-fzROvQPL8-05kX16lTIhXb-v9NaXKHK3fT7_O1ygxsjUFVHT0r-P-DQyRfP3PXtIEgqzsg4GN1FjNWp5m9jm4w9vIY-tR0EinChWWa2BwF2eJav0H3WKRWzTKIR52aJtlM5DMR-u5Ao4JkWmKpl2_WIZNDCLQKVA62wYvoupMwPVmal"/>
+<div class="absolute top-2 right-2 z-20 bg-background/80 backdrop-blur px-2 py-1 rounded border border-outline/50">
+<span class="lcd-text font-data-mono text-xs">$12.50</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-md text-[18px] text-primary mb-1">T-Rex Crispy Strips</h3>
+<p class="font-body-rg text-sm text-on-surface-variant flex-grow">Aged 65 million years, Extra Crunchy.</p>
+<button class="mt-4 w-full py-2 border border-primary-container/50 text-primary-container font-label-caps text-[10px] uppercase rounded hover:bg-primary-container/10 transition-colors">Add to Cart</button>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="brushed-metal rounded-lg overflow-hidden flex flex-col relative group hover:-translate-y-1 transition-transform duration-300 neon-border-primary">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 z-30 bg-primary-container text-on-primary-container font-label-caps text-[9px] uppercase px-3 py-1 rounded-full shadow-[0_0_10px_rgba(0,240,255,0.8)] whitespace-nowrap">
+                        May alter timeline
+                    </div>
+<div class="h-40 bg-surface-container-high relative overflow-hidden mt-2">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A large, glowing burger with a bright neon green/cyan sauce leaking out, highly stylized 80s sci-fi aesthetic, served on a metallic tray. Dark background, heavy rim lighting, vapor-mechanical industrial fast food look, highly detailed textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaUCcEA8We56vE0M_PJutDnlEKee4eBxlJmiUN1nXd32C1f1MUhfZ1bDUFQK8QvCbiGuRYl-1Pw7rh_rJmzddNhLclZf7iPx3DJGxYQmoCUFSgBlunV1Eay2QxDVXSsYLY50VjvYs1ZwmlFGtzUXKuTotpl1MUpiqyPoZzBRuLiv9u7tIjP19zB1eMs9s_mrV8RR7DqaAsm1591Li-c6epM39Eug0obyQQUwMyJEHNCViePxp26Plw"/>
+<div class="absolute top-2 right-2 z-20 bg-background/80 backdrop-blur px-2 py-1 rounded border border-primary-container/50">
+<span class="font-data-mono text-primary-container text-xs drop-shadow-[0_0_5px_rgba(0,240,255,0.8)]">$15.00</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-md text-[18px] text-primary mb-1">Plutonium-Spiced Hover Burger</h3>
+<p class="font-body-rg text-sm text-on-surface-variant flex-grow">A volatile mix of flavors.</p>
+<button class="mt-4 w-full py-2 bg-primary-container/20 border border-primary-container text-primary-container font-label-caps text-[10px] uppercase rounded hover:bg-primary-container hover:text-on-primary-container transition-colors">Add to Cart</button>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="glass-panel rounded-lg overflow-hidden flex flex-col group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-40 bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Three tacos heavily loaded with futuristic glowing ingredients, bright neon orange and cyan garnishes, sitting on a brushed stainless steel plate. Cyberpunk street food aesthetic, dark atmospheric background, smoke effects, 80s retro-future style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmd3w6xdaMYOGIxJb4mwXdKWyZK5iI0jCyEdS_PNfJq1GoEPbVrkZHrDKBKbG8dRpRH7tJgJ3V8TaosH3LujPRohT6qxVVkyXPCrNyOIloSwsYyaWXW_6PGAepMypLm4w5XBSLIWoP9zen2s30cUQN5GXmlYhEL2Cx0CZFSS4sugAJg3UjCKB1O94M2jWuv4R58CU9uC-lZDfAyJQ_cA1xqJ220CIa6Qk-p5RdQoNnu3x562_ZsMzE"/>
+<div class="absolute top-2 right-2 z-20 bg-background/80 backdrop-blur px-2 py-1 rounded border border-outline/50">
+<span class="lcd-text font-data-mono text-xs">$10.00</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-md text-[18px] text-primary mb-1">DeLorean Loaded Tacos</h3>
+<p class="font-body-rg text-sm text-on-surface-variant flex-grow">Served 1 minute before you ordered.</p>
+<button class="mt-4 w-full py-2 border border-primary-container/50 text-primary-container font-label-caps text-[10px] uppercase rounded hover:bg-primary-container/10 transition-colors">Add to Cart</button>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="glass-panel rounded-lg overflow-hidden flex flex-col group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-40 bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A glowing blue and white milkshake in a heavy, industrial glass mug. Electrical sparks and subtle light streams emanate from the drink. Dark moody background, brushed metal table, 80s sci-fi diner aesthetic, hyper-detailed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgRLL2PtGicai9k3Z8rW9E5REgEG9xsNrTaW2piTnJYC3irupCw9wvSeB4FqoJnFPd5H_4GGoiCS7fU9T-0qLwKbVDDh-ugmWhhX8D0vz-Io5zSfOQ8T2LBnl6VyOFJivQM30khVsBOYoq2RdpiK6sz95qhMXobPAMS09tpuCEexRYZ2ZcV3Z-xUpB6TeUIRiMuytDP2uUva5CXNobGAh1fHuD5mfJKcAzEiAzCFG-b-e4-ZxUO-RX"/>
+<div class="absolute top-2 right-2 z-20 bg-background/80 backdrop-blur px-2 py-1 rounded border border-outline/50">
+<span class="lcd-text font-data-mono text-xs">$8.00</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-md text-[18px] text-primary mb-1">Flux Milkshake</h3>
+<p class="font-body-rg text-sm text-on-surface-variant flex-grow">1.21 Gigawatts of sugar.</p>
+<button class="mt-4 w-full py-2 border border-primary-container/50 text-primary-container font-label-caps text-[10px] uppercase rounded hover:bg-primary-container/10 transition-colors">Add to Cart</button>
+</div>
+</article>
+</div>
+</section>
+<!-- Live Paradox-Free Tracking -->
+<section class="py-stack-lg max-w-7xl mx-auto px-gutter md:px-margin-desktop my-stack-lg">
+<div class="brushed-metal rounded-xl p-8 relative overflow-hidden">
+<!-- Grid background overlay -->
+<div class="absolute inset-0 pointer-events-none opacity-20" style="background-image: linear-gradient(theme('colors.primary-container') 1px, transparent 1px), linear-gradient(90deg, theme('colors.primary-container') 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="relative z-10 flex flex-col lg:flex-row gap-8 items-center justify-between">
+<div class="w-full lg:w-1/3">
+<h2 class="font-headline-md text-headline-md text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container">radar</span>
+                            Live Paradox-Free Tracking
+                         </h2>
+<p class="font-data-mono text-xs text-on-surface-variant mb-6 uppercase tracking-wider">Current Location Signatures</p>
+<div class="space-y-4">
+<!-- Readout blocks -->
+<div class="bg-surface-container-lowest/80 border border-outline/30 p-3 rounded flex justify-between items-center">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Temporal Flux</span>
+<span class="lcd-text font-data-mono text-sm text-primary-container drop-shadow-[0_0_5px_rgba(0,240,255,0.8)] text-right">STABLE</span>
+</div>
+<div class="bg-surface-container-lowest/80 border border-outline/30 p-3 rounded flex justify-between items-center">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Power Level</span>
+<span class="lcd-text font-data-mono text-sm text-secondary-container drop-shadow-[0_0_5px_rgba(255,138,13,0.8)] text-right">1.21 GW</span>
+</div>
+</div>
+</div>
+<!-- Timeline Line visualization -->
+<div class="w-full lg:w-2/3 relative py-12">
+<!-- The connecting line -->
+<div class="absolute top-1/2 left-4 right-4 h-1 bg-surface-container-highest -translate-y-1/2 rounded-full overflow-hidden">
+<!-- glowing fill -->
+<div class="absolute top-0 left-0 h-full w-[60%] bg-gradient-to-r from-transparent via-primary-container to-primary-container shadow-[0_0_10px_rgba(0,240,255,0.8)]"></div>
+</div>
+<!-- Nodes -->
+<div class="relative flex justify-between items-center w-full z-10">
+<div class="flex flex-col items-center gap-2 -ml-2">
+<div class="timeline-node"></div>
+<span class="font-data-mono text-[10px] text-on-surface-variant bg-surface-container-highest px-2 py-1 rounded">1885</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="timeline-node"></div>
+<span class="font-data-mono text-[10px] text-on-surface-variant bg-surface-container-highest px-2 py-1 rounded">1955</span>
+</div>
+<!-- Active Node -->
+<div class="flex flex-col items-center gap-2 relative">
+<div class="timeline-node active">
+<div class="absolute inset-0 bg-primary-container rounded-full animate-ping opacity-50"></div>
+</div>
+<span class="font-data-mono text-[12px] text-surface-tint font-bold bg-surface-container-highest px-2 py-1 rounded border border-primary-container/50">1985</span>
+<span class="absolute -top-8 text-[9px] uppercase font-label-caps text-secondary-container whitespace-nowrap">Current Dest</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="timeline-node"></div>
+<span class="font-data-mono text-[10px] text-on-surface-variant bg-surface-container-highest px-2 py-1 rounded">2015</span>
+</div>
+<div class="flex flex-col items-center gap-2 -mr-2">
+<div class="timeline-node border-dashed"></div>
+<span class="font-data-mono text-[10px] text-on-surface-variant/50 bg-surface-container-highest/50 px-2 py-1 rounded">2088</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews -->
+<section class="py-stack-lg max-w-7xl mx-auto px-gutter md:px-margin-desktop mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-surface-tint mb-stack-lg border-l-4 border-secondary-container pl-4">Chronological Feedback</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Review 1 -->
+<div class="glass-panel p-6 rounded-lg relative">
+<div class="absolute -top-4 -right-4 text-6xl text-outline-variant/30 font-display-lg italic">"</div>
+<div class="flex items-center gap-3 mb-4 border-b border-outline-variant/30 pb-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border border-outline">
+<img class="w-full h-full object-cover" data-alt="A small avatar portrait of a Victorian gentleman with a top hat and monocle, styled in a dark, slightly gritty 80s retro-future aesthetic, sepia tones mixed with subtle neon highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxTBLBpGAOK4HUeGyUq-rUO8gQOgxQ6xi97dlbgLOXqtkQRZ8FNlljrwxmhXKrfc56WysKF8nbag5gbFXN3yOyoQbmPKoxxysfSqekVh3yPOCkbpOhyOjvydCazmQBraJdBtt146jXGKIzc6m-g7GVTZnmNiZ_YVxHonoc9UmrzcDcQaw_H-4OastELeX8C1UZgjERq1MOspqQZ6jEVs753o7UeO2ssshV0GJrewO3H_ks8AAerMZ3"/>
+</div>
+<div>
+<p class="font-data-mono text-sm text-primary">Victorian Gentleman</p>
+<p class="font-label-caps text-[9px] text-on-surface-variant uppercase">Timeline: 1885</p>
+</div>
+</div>
+<p class="font-body-rg text-on-surface-variant text-sm italic">"The establishments fare is quite peculiar. The fiery heat of those 'Hover Burgers' was almost too much for my delicate constitution. A marvel of modern... whatever era this is."</p>
+<div class="flex text-secondary-container mt-4 text-sm">
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="glass-panel p-6 rounded-lg relative neon-border-primary transform md:-translate-y-4">
+<div class="absolute -top-4 -right-4 text-6xl text-primary-container/20 font-display-lg italic">"</div>
+<div class="flex items-center gap-3 mb-4 border-b border-outline-variant/30 pb-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border border-primary-container">
+<img class="w-full h-full object-cover" data-alt="A small avatar portrait of a 2015 era cool teenager with colorful futuristic clothing and reflective visor glasses, 80s retro-future aesthetic, vibrant neon colors on a dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKHaSoLhTTtlvHhmRTJ0xkK2Hhd_PhoFICLklRFhYk3d8jT2_9OZkfLotCBKthz6-qQnAbMFd33bVAyHthdMOOhEYDddQjp16S1LXBUtEEObOhIt1zWafDFq_z1pEscVO-EjllLLAQ9fFghsIe0Qm1GWHXgzeMTGKtmK18gLBqNKf_6btHhLjCaNXH-GIVWyHJ-ITK1Fg1asrh4OdRx736IZqEC5DvC6QlfnfqtvcwedQJONwDw84l"/>
+</div>
+<div>
+<p class="font-data-mono text-sm text-primary">Hoverboarder</p>
+<p class="font-label-caps text-[9px] text-primary-container uppercase">Timeline: 2015</p>
+</div>
+</div>
+<p class="font-body-rg text-on-surface-variant text-sm italic">"Totally rad! The Flux Milkshake gave me enough energy to outrun Griff's crew. Def coming back next Tuesday... or was it last Thursday?"</p>
+<div class="flex text-secondary-container mt-4 text-sm">
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="glass-panel p-6 rounded-lg relative">
+<div class="absolute -top-4 -right-4 text-6xl text-outline-variant/30 font-display-lg italic">"</div>
+<div class="flex items-center gap-3 mb-4 border-b border-outline-variant/30 pb-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border border-outline">
+<img class="w-full h-full object-cover" data-alt="A small avatar portrait of a medieval knight in dirty steel armor, 80s sci-fi lighting with stark shadows and a faint cyan rim light, highly detailed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3YmNsv_dIqrpdRzJlt1y-G-6TwoRnKk9R3SPh6O2XD-vg2bYMwUxaxCt7Zuta3mNTPHLXRYl5JIWzpwzljG8wEb4I6Jd3P6bXiwnMQ2bi3G4ugMlJG6d0m48emMbFjTQRVa0HUcasqL8Pura2tZmWeGZmILBAWRsyndni2AwKh2_E3fmcjcLTbxslo66Rerzw1p4WNMP8L3bPPx4huOuF3OQN887akKkI4Z85-4MAURUc8LvWf5LM"/>
+</div>
+<div>
+<p class="font-data-mono text-sm text-primary">Medieval Knight</p>
+<p class="font-label-caps text-[9px] text-on-surface-variant uppercase">Timeline: 1345</p>
+</div>
+</div>
+<p class="font-body-rg text-on-surface-variant text-sm italic">"I know not what sorcery constructed this metal chariot, nor what a 'taco' truly is, but by the heavens, it was a feast worthy of kings. The meat was tender, the spices... otherworldly."</p>
+<div class="flex text-secondary-container mt-4 text-sm">
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest full-width bottom-0 border-t-4 border-double border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-stack-lg gap-stack-md max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="font-display-lg text-headline-md text-primary italic">
+                    88 MPH Diner
+                </div>
+<p class="font-data-mono text-[10px] text-on-surface-variant text-center md:text-left opacity-60">
+                    © 1885-2015-3000 Paradox-Free Dining LLC. No refunds for changed timelines.
+                </p>
+</div>
+<ul class="flex flex-wrap justify-center gap-4">
+<li class="font-data-mono text-data-mono text-on-surface-variant hover:text-secondary-container transition-colors opacity-80 hover:opacity-100 cursor-pointer text-xs uppercase">Safety Disclaimer</li>
+<li class="font-data-mono text-data-mono text-on-surface-variant hover:text-secondary-container transition-colors opacity-80 hover:opacity-100 cursor-pointer text-xs uppercase">Frequency 104.2</li>
+<li class="font-data-mono text-data-mono text-on-surface-variant hover:text-secondary-container transition-colors opacity-80 hover:opacity-100 cursor-pointer text-xs uppercase">Frequency 88.0</li>
+<li class="font-data-mono text-data-mono text-on-surface-variant hover:text-secondary-container transition-colors opacity-80 hover:opacity-100 cursor-pointer text-xs uppercase">Timeline Policy</li>
+</ul>
+</div>
+</footer>
+</body></html>
