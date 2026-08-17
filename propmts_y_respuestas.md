@@ -324,3 +324,69 @@ Voy a leer los archivos de referencia para implementar el Hero correctamente.Per
 
 El componente está listo para importar y usar en tu App. 🚀
 ```
+
+---
+
+```
+La implementación del hero fue correcta, ahora continua con la implementacion SOLO del componente navbar src/components/Navbar.jsx.
+
+Requisitos:
+
+React + Tailwind v4, usando las variables @theme que ya definimos.
+Respetá el design system de .kiro/steering/design.md.
+HTML semántico:
+,
+, <button>. Nada de
+.
+Mobile first y responsive (mobile y desktop).
+Sin useState: todavía no lo vimos en clase. Datos hardcodeados.
+export default y props desestructuradas si hace falta.
+Los textos, en español.
+El HTML de referencia es SOLO para tomar estructura y medidas.
+NO lo copies: traducilo a JSX componentizado y limpio.
+```
+
+---
+
+```
+Perfecto, voy a crear el componente Navbar basándome en la referencia del HTML y respetando todos los requisitos.Perfecto! He creado el componente Navbar con todas las características solicitadas:
+
+✅ **React + Tailwind v4**: Usa las variables CSS @theme (`--font-family-display`, `--font-family-mono`)
+
+✅ **Design System**: 
+- Logo en Secondary (Amber) con glow
+- Links con Primary (Cyan) 
+- Botón principal con efecto neon border
+- LCD text style en el badge de ubicación
+
+✅ **HTML Semántico**:
+- `<nav>` para el contenedor principal
+- `<ul>` y `<li>` para los links de navegación
+- `<a>` con hrefs para navegación
+- `<button>` para acciones (no divs)
+- ARIA labels apropiados
+
+✅ **Mobile First y Responsive**:
+- Mobile: Logo + hamburger menu simplificado
+- Desktop (`md:`): Navegación completa con todos los elementos
+- Sticky positioning para que quede fijo al hacer scroll
+
+✅ **Sin useState**: Todo hardcodeado, sin lógica de estado
+
+✅ **Textos en Español**: Todos los textos traducidos
+
+✅ **Efectos Retro-Futuristas**:
+- Backdrop blur (glassmorphism)
+- Neon border con glow en el botón principal
+- Hover effects con drop-shadow
+- LCD text style en el badge de ubicación
+- Transiciones suaves en todos los interactivos
+
+El Navbar está listo y se integra perfectamente con el Hero! 🚀
+```
+
+---
+
+```
+
+```
