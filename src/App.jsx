@@ -6,6 +6,8 @@ import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import Tracking from './components/Tracking'
 import Menu from './components/menu/Menu'
+import Feedback from './components/feedback/Feedback'
+import Footer from './components/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +18,8 @@ function App() {
     <Hero></Hero>
     <Menu></Menu>
     <Tracking></Tracking>
+    <Feedback></Feedback>
+    <Footer></Footer>
     </>
   )
 }
