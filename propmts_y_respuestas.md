@@ -388,5 +388,86 @@ El Navbar está listo y se integra perfectamente con el Hero! 🚀
 ---
 
 ```
+La implementación del navbar fue correcta, ahora continua con la implementacion SOLO del componente tracking src/components/Tracking.jsx. Dicho componente hace referencia a la targeta que dice 'Live paradox free tracking' Puedes descomponer el componente en subcomponentes si ves necesario
+Requisitos:
+React + Tailwind v4, usando las variables @theme que ya definimos.
+Respetá el design system de .kiro/steering/design.md.
+HTML semántico:
+,
+, <button>. Nada de
+.
+Mobile first y responsive (mobile y desktop).
+Sin useState: todavía no lo vimos en clase. Datos hardcodeados.
+export default y props desestructuradas si hace falta.
+Los textos, en español.
+El HTML de referencia es SOLO para tomar estructura y medidas.
+NO lo copies: traducilo a JSX componentizado y limpio.
+```
+
+---
+
+```
+Perfecto, voy a crear el componente Tracking con subcomponentes para mantenerlo limpio y componentizado.Perfecto! He creado el componente Tracking descompuesto en 3 subcomponentes para mejor organización:
+
+## Estructura de Componentes:
+
+### 1. **`StatusReadout`** 
+Componente reutilizable para las lecturas LCD de estado (Flujo Temporal, Nivel de Energía)
+- Props: `label`, `value`, `variant` (primary/secondary)
+- Estilo LCD con glow effect
+
+### 2. **`TimelineNode`**
+Componente para cada punto en la línea temporal
+- Props: `year`, `isActive`, `isFuture`
+- Maneja nodos activos, pasados y futuros (dashed)
+- Animación ping en el nodo activo
+- Label "Destino Actual" condicional
+
+### 3. **`Timeline`**
+Componente que orquesta toda la visualización temporal
+- Línea conectora con gradiente de progreso
+- Array de datos hardcodeados
+- Layout responsive de los nodos
+
+### 4. **`Tracking`** (Principal)
+Contenedor principal con el layout en dos columnas
+
+## Características Implementadas:
+
+✅ **React + Tailwind v4**: Usa variables @theme CSS
+
+✅ **Design System**: 
+- Brushed metal background con gradiente
+- Grid pattern overlay
+- LCD text con glow effects
+- Primary/Secondary colors apropiados
+
+✅ **HTML Semántico**:
+- `<section>` con id para navegación
+- `<h2>` para el título
+- Estructura semántica clara
+
+✅ **Mobile First y Responsive**:
+- Stack vertical en mobile, horizontal en desktop (`lg:`)
+- Timeline se adapta con espaciado fluido
+- Padding y gaps responsivos
+
+✅ **Sin useState**: Todo hardcodeado en arrays de datos
+
+✅ **Textos en Español**: Todos traducidos
+
+✅ **Efectos Retro-Futuristas**:
+- Brushed metal container
+- Grid overlay industrial
+- Glowing progress bar
+- Animated ping en nodo activo
+- LCD style readouts
+
+El componente está perfectamente componentizado y listo para usar! 🚀
+```
+
+---
+
+```
 
 ```
