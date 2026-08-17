@@ -1,16 +1,18 @@
-# React + Vite
+# README
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Qué es
+Este proyecto es una landing page para un food truck ficticio con tematica retro futurista, desarrollada principalmente con google Stitch y KiroIDE.
 
-Currently, two official plugins are available:
+## Cómo correrlo
+```bash
+npm install
+npm run dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Uso de IA
+- Usé chat de IA para revisar la estructura y obtener los prompts correctos.
+- IA's utilizadas: Google Gemini para el prompting, Stitch para diseño y obtencion de html plano, captura del diseño y archivo DESIGN.md, KiroIDE para la transición del html plano a componentes de React con estilos usando TailwindCss
 
-## React Compiler
+## Lo que me costó
+Lo más difícil fue la transicion de la referencia a su version en componentes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
