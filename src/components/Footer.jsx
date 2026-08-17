@@ -1,12 +1,6 @@
-export default function Footer() {
-  // Links del footer hardcodeados
-  const footerLinks = [
-    { id: 1, label: 'Descargo de Seguridad', href: '#' },
-    { id: 2, label: 'Frecuencia 104.2', href: '#' },
-    { id: 3, label: 'Frecuencia 88.0', href: '#' },
-    { id: 4, label: 'Política de Línea Temporal', href: '#' }
-  ];
+﻿import { footerLinks } from '../data/data';
 
+export default function Footer() {
   return (
     <footer 
       className="w-full bottom-0 border-t-4 border-double"
@@ -39,7 +33,7 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Footer Links */}
+        {/* Footer Links - .map() con key */}
         <nav aria-label="Enlaces del pie de página">
           <ul className="flex flex-wrap justify-center gap-4">
             {footerLinks.map((link) => (

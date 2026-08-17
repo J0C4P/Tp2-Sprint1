@@ -1,3 +1,5 @@
+﻿import {timelineData} from '../data/data';
+
 // Subcomponente para las lecturas de estado
 function StatusReadout({ label, value, variant = 'primary' }) {
   const colorStyles = {
@@ -101,14 +103,6 @@ function TimelineNode({ year, isActive = false, isFuture = false }) {
 
 // Subcomponente para la línea de tiempo visual
 function Timeline() {
-  const timelineData = [
-    { year: '1885', isActive: false },
-    { year: '1955', isActive: false },
-    { year: '1985', isActive: true },
-    { year: '2015', isActive: false },
-    { year: '2088', isActive: false, isFuture: true }
-  ];
-
   return (
     <div className="w-full lg:w-2/3 relative py-12">
       {/* Connecting Line */}
