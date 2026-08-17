@@ -48,7 +48,7 @@ export default function Hero() {
               textShadow: '0 0 10px rgba(0, 240, 255, 0.8), 0 0 20px rgba(0, 240, 255, 0.4)'
             }}
           >
-            Comida Rápida a 88 Millas por Hora — A Donde Vamos, No Necesitamos Platos.
+            Comida Rápida a 88 Millas por Hora - A Donde Vamos, No Necesitamos Platos.
           </h1>
 
           {/* Description */}
