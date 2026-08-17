@@ -744,9 +744,3 @@ Voy a leer los archivos actuales para aplicar los estilos necesarios correctamen
 
 ¡La landing está completa y lista! 🎨✨
 ```
-
----
-
-```
-
-```
