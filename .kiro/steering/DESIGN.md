@@ -1,4 +1,18 @@
 ---
+inclusion: always
+---
+
+# Design system del proyecto
+
+Este es el design system oficial de la landing. **Toda** la UI que generes debe respetar estos tokens.
+
+Reglas de aplicación:
+- Traducí los tokens a clases de Tailwind v4 definidas en '@theme' en 'src/index.css'. NO uses valores arbitrarios tipo 'text-{#e50914}'.
+- Si necesitas un color, tipografia o espaciado que no está en los tokens, avisame antes de inventarlo.
+- Respeta el patron color / on-color para garantizar contraste
+- HTML semántico y accesible siempre
+
+---
 name: Chronos Retro-Futurist
 colors:
   surface: '#131315'

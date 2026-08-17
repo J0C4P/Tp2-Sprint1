@@ -225,3 +225,102 @@ The shape language is "Tactical & Geometric."
 - **Time-Circuit Tabs:** Horizontal segments that toggle with a mechanical "click" sound (visualized by a sudden color snap from Amber to Cyan).
 - **Progress Bars:** Segmented blocks (like a battery charge indicator) rather than a smooth continuous fill.
 ```
+
+---
+
+```
+Leé el design system en .kiro/steering/design.md y traducí los tokens de colors, typography, rounded y spacing a vraiables @theme de tailwind v4 en src/index.css - Un token = una variable css. - Importá las fuentes de GoogleFonts en el index.css - No escribas ningún componente todavia
+```
+
+---
+
+```
+Perfecto, ya leí el design system. Ahora voy a traducir todos los tokens a variables CSS de Tailwind v4 en el archivo `src/index.css`.Listo! He traducido todos los tokens del design system a variables CSS de Tailwind v4:
+
+**✅ Colors** - Todos los colores del sistema (surface, primary, secondary, tertiary, error, fixed, background)
+
+**✅ Typography** - Familias de fuentes, tamaños, pesos, line-heights y letter-spacing para:
+- display-lg (desktop y mobile)
+- headline-md
+- body-rg
+- data-mono
+- label-caps
+
+**✅ Rounded** - Los 6 valores de border-radius (sm, default, md, lg, xl, full)
+
+**✅ Spacing** - Todos los tokens de espaciado (unit, gutter, margins, stacks)
+
+**✅ Google Fonts** - Importadas las 3 fuentes necesarias:
+- Sora (700, 800)
+- Hanken Grotesk (400, 500, 600, 700)
+- JetBrains Mono (500, 700)
+
+Ahora podés usar estos tokens en tu código con las clases de Tailwind, por ejemplo: `text-primary`, `bg-surface`, `font-display-lg`, `rounded-md`, etc.
+```
+---
+
+```
+Adjunto el screenshot de la landing (_design-reference/landing.png) y
+
+el HTML de referencia (_design-reference/landing.html).
+
+Implementá SOLO la sección Hero, como src/components/Hero.jsx.
+
+Requisitos:
+
+React + Tailwind v4, usando las variables @theme que ya definimos.
+
+Respetá el design system de .kiro/steering/design.md.
+
+HTML semántico:
+
+,
+, <button>. Nada de
+.
+Mobile first y responsive (mobile y desktop).
+
+Sin useState: todavía no lo vimos en clase. Datos hardcodeados.
+
+export default y props desestructuradas si hace falta.
+
+Los textos, en español.
+
+El HTML de referencia es SOLO para tomar estructura y medidas.
+
+NO lo copies: traducilo a JSX componentizado y limpio.
+```
+
+---
+
+```
+Voy a leer los archivos de referencia para implementar el Hero correctamente.Perfecto, ahora voy a crear el componente Hero con React y las variables @theme que definimos. Voy a traducir la estructura del HTML a JSX componentizado, semántico y responsive.Listo! He creado el componente Hero con las siguientes características:
+
+✅ **React + Tailwind v4**: Usa las variables CSS @theme que definimos (`--font-family-display`, `--font-family-body`, `--font-family-mono`)
+
+✅ **Design System**: Respeta todos los colores y tipografías del sistema (Primary Cyan, Secondary Amber, efectos de glow neon)
+
+✅ **HTML Semántico**: 
+- `<section>` para el contenedor principal
+- `<h1>` para el título principal
+- `<button>` para las acciones (no divs)
+- ARIA labels para accesibilidad
+
+✅ **Mobile First y Responsive**:
+- Grid que se adapta de 1 columna (mobile) a 12 columnas (desktop)
+- Imagen del hero solo visible en `lg:` (desktop)
+- Typography fluida con `clamp()` 
+- Espaciado adaptativo (`md:` breakpoints)
+
+✅ **Sin useState**: Todo hardcodeado como pediste
+
+✅ **Textos en Español**: Todos los textos traducidos
+
+✅ **Efectos Retro-Futuristas**:
+- Neon glow en textos y bordes
+- Badge con animación pulse
+- Hover states con transiciones
+- Scanlines y gradientes industriales
+- Background con blur y overlay
+
+El componente está listo para importar y usar en tu App. 🚀
+```
